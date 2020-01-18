@@ -11,20 +11,21 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 import { Card, CardItem, Body } from 'native-base';
 
-import { fetchNewsInitiate, selectedNewsAction } from '../redux/Action/fetchNewsAction';
+import { fetchNewsInitiate, } from '../redux/Action/fetchNewsAction';
+import { selectedNewsAction } from '../redux/Action/selectedNewsAction';
 
-var { height, width } = Dimensions.get('window');
+const { height, width } = Dimensions.get('window');
+
 const NewsList = (props) => {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchNewsInitiate())
     }, [])
     const fetchedData = useSelector(state => state.fetchNews)
-    console.log('hello', fetchedData);
+    
     
     const renderDatafunc = ({ item }) => (
         <TouchableOpacity onPress= { () => {
-            console.log(item)
             dispatch(selectedNewsAction(item))
             props.navigation.navigate('Detail')
         } }>

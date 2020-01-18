@@ -7,7 +7,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
 import NewsList from './Container/newsList';
-import NewOne from './Container/newOne';
+import Detail from './Container/Detail';
 import rootReducer from './redux/reducer/index';
 import { rootSaga } from './redux/Saga/index';
 
@@ -17,7 +17,7 @@ export default function App(props) {
       screen: NewsList
     },
     Detail: {
-      screen: NewOne
+      screen: Detail
     }
   })
   const ContainerApp = createAppContainer(StackList);

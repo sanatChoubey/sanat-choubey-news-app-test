@@ -19,7 +19,3 @@ export const fetchNewsError = (data) => {
         payload: data
     })
 }
-export const selectedNewsAction = (data) => ({
-    type:actionTypes.SELECTED_NEWS,
-    payload:data
-}) 

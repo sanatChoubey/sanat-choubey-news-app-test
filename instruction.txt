@@ -1,0 +1,10 @@
+To Run this App There is an instruction 
+
+1 => first you have to install node in you system then,
+2 => You have to install React and react native from Npm 
+3 => Now you have to install expo from for intallation please checkout official Doc
+4 => After installation of expo globally in yoour stystem go to folder where you kept this app file 
+5 => then run npm i and expo start after installation complete respectively.
+6 => then connect your android app or install expo app from play store or app store 
+and scan the OR code.
+

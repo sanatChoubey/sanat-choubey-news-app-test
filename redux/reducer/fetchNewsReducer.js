@@ -12,7 +12,8 @@ export default function fetchNewsReducer(state= initalState, { type, payload}){
         case actionTypes.FECTH_NEW_DATA_SUCCESSFUL:
             return {...state, NewsData:payload, Loading:false}
         case actionTypes.FETCH_NEW_DATA_ERROR:
-            return {...state, Error:payload, Loading:false}        
+            return {...state, Error:payload, Loading:false} 
+        
         default:
             return state    
     }
