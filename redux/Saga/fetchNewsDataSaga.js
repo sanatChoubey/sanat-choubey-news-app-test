@@ -1,4 +1,14 @@
+import configData from '../../Config/config';
+import axios from 'axios';
+import { put } from 'redux-saga/effects';
+import { fetchNewsSuccessful, fetchNewsError } from '../Action/fetchNewsAction';
 
 export function* fetchNewsData (){
-    yield console.log('saga is working fine')
+    try{
+        const resultData = yield axios.get(configData.apiUrl)
+        yield put(fetchNewsSuccessful(resultData.data.articles))
+
+    }catch(e){
+        yield put(fetchNewsError({error:e}))
+    }
 }
